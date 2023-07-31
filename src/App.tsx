@@ -17,7 +17,7 @@ function App() {
       </div>
       <footer className="text-yellow-500 p-5">
         <p className="text-sm">
-          © 2023 Walnut Trading Collective | Made with ❤️ in Berkeley
+          © 2023 Walnut Trading Collective | Made with ❤️ in Berkeley, CA
         </p>
       </footer>
     </div>
