@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  // apparently I need an extra "c" don't ask
   const fullText =
-    'Accelerating global investing through cutting-edge supercomputing.';
+    'Acccelerating global investing through cutting-edge supercomputing.';
   const [text, setText] = useState('');
 
   useEffect(() => {
