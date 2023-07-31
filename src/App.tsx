@@ -1,4 +1,24 @@
+import React, { useState, useEffect } from 'react';
+
 function App() {
+  const fullText =
+    'Accelerating global investing through cutting-edge supercomputing.';
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    const typingEffect = setInterval(() => {
+      if (i < fullText.length) {
+        setText((prevText) => prevText + fullText.charAt(i));
+        i++;
+      } else {
+        clearInterval(typingEffect);
+      }
+    }, 50);
+
+    return () => clearInterval(typingEffect);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen bg-indigo-950 font-mono text-center p-4 md:p-0">
       <div className="flex-grow flex flex-col justify-center items-center">
@@ -6,7 +26,7 @@ function App() {
           Walnut Trading Collective
         </h1>
         <p className="text-sm md:text-lg lg:text-xl text-white mb-8">
-          Accelerating global investing through cutting-edge supercomputing
+          {text}
         </p>
         <a
           href="#contact-us"
